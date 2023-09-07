@@ -1,0 +1,1 @@
+# partisia-example-contract
