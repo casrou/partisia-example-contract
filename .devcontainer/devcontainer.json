@@ -1,0 +1,9 @@
+{
+  "name": "partisia-smart-contract-devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": {
+      "version": "1.69"
+    }
+  }
+}
