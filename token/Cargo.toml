@@ -1,0 +1,27 @@
+[package]
+name = "token-contract"
+version = "1.13.0"
+description = "Example contract for the Partisia Blockchain."
+homepage = "https://gitlab.com/partisiablockchain/language/example-contracts"
+repository = "https://gitlab.com/partisiablockchain/language/example-contracts"
+documentation = "https://gitlab.com/partisiablockchain/language/example-contracts"
+readme = "README.md"
+edition = "2021"
+license = "MIT"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ['rlib', 'cdylib']
+
+[dependencies]
+pbc_contract_common = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
+pbc_contract_codegen = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
+pbc_traits = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
+pbc_lib = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
+read_write_rpc_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
+read_write_state_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
+create_type_spec_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
+pbc_zk = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
+
+[features]
+abi = ["pbc_contract_common/abi", "pbc_contract_codegen/abi", "pbc_traits/abi", "create_type_spec_derive/abi"]
