@@ -27,7 +27,7 @@ path = "src/zk_test.rs"
 zk-compute-path = "src/zk_compute.rs"
 
 [package.metadata.zkcompiler]
-url = "https://gitlab.com/api/v4/groups/12499775/-/packages/maven/com/partisiablockchain/language/zkcompiler/3.82.0/zkcompiler-3.82.0-jar-with-dependencies.jar"
+url = "https://gitlab.com/api/v4/groups/12499775/-/packages/maven/com/partisiablockchain/language/zkcompiler/4.2.0/zkcompiler-4.2.0-jar-with-dependencies.jar"
 
 [dependencies]
 pbc_contract_common = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
