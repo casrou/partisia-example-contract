@@ -12,3 +12,14 @@ The contract uses the standard MPC-20 format you can find [the specification her
 
 The contract is inspired by the ERC20 token contract:
 <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md>
+
+## Build the contract
+
+```bash
+cargo partisia-contract build --release
+```
+
+## Deploy to Partisia Testnet
+```bash
+cargo partisia-contract cli tx deploy --privatekey privatekey.txt --gas 2500000 target/wasm32-unknown-unknown/release/token_contract.wasm target/wasm32-unknown-unknown/release/token_contract.abi ExampleCoin EXC 2 10000
+```
