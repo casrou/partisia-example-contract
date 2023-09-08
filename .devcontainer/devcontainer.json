@@ -1,9 +1,17 @@
 {
   "name": "partisia-smart-contract-devcontainer",
-  "build": { "dockerfile": "Dockerfile" },
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "customizations": {
     "vscode": {
-      "extensions": ["rust-lang.rust-analyzer"]
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml"
+      ],
+      "settings": {
+        "workbench.colorTheme": "Default Dark+"
+      }
     }
   }
 }
