@@ -1,6 +1,6 @@
 [package]
 name = "zk-voting-simple"
-version = "1.13.0"
+version = "1.65.0"
 description = "Example contract for the Partisia Blockchain."
 homepage = "https://gitlab.com/partisiablockchain/language/example-contracts"
 repository = "https://gitlab.com/partisiablockchain/language/example-contracts"
@@ -12,7 +12,13 @@ edition = "2021"
 license = "MIT"
 
 [features]
-abi = ["pbc_contract_common/abi", "pbc_contract_codegen/abi", "pbc_traits/abi", "create_type_spec_derive/abi", "pbc_lib/abi"]
+abi = [
+    "pbc_contract_common/abi",
+    "pbc_contract_codegen/abi",
+    "pbc_traits/abi",
+    "create_type_spec_derive/abi",
+    "pbc_lib/abi",
+]
 plus_metadata = []
 
 [lib]
@@ -26,15 +32,23 @@ path = "src/zk_test.rs"
 [package.metadata.zk]
 zk-compute-path = "src/zk_compute.rs"
 
+[package.metadata.partisiablockchain]
+cargo-partisia = "4.8.0"
+contract-integrationtest = "3.117.0"
+
 [package.metadata.zkcompiler]
-url = "https://gitlab.com/api/v4/groups/12499775/-/packages/maven/com/partisiablockchain/language/zkcompiler/4.2.0/zkcompiler-4.2.0-jar-with-dependencies.jar"
+url = "https://gitlab.com/api/v4/groups/12499775/-/packages/maven/com/partisiablockchain/language/zkcompiler/4.14.0/zkcompiler-4.14.0-jar-with-dependencies.jar"
+
+[package.metadata.abi-client]
+url = "https://gitlab.com/api/v4/groups/12499775/-/packages/maven/com/partisiablockchain/language/abi-client/4.22.0/abi-client-4.22.0-jar-with-dependencies.jar"
+
 
 [dependencies]
-pbc_contract_common = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
-pbc_contract_codegen = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
-pbc_traits = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
-pbc_lib = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
-read_write_rpc_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
-read_write_state_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
-create_type_spec_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
-pbc_zk = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "15.1.0" }
+pbc_contract_common = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "16.0.1" }
+pbc_contract_codegen = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "16.0.1" }
+pbc_traits = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "16.0.1" }
+pbc_lib = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "16.0.1" }
+read_write_rpc_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "16.0.1" }
+read_write_state_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "16.0.1" }
+create_type_spec_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "16.0.1" }
+pbc_zk = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "16.0.1" }
